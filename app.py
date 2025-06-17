@@ -432,7 +432,7 @@ async def generate_answer(question, relevant_results, max_retries=2):
                 "Content-Type": "application/json"
             }
             payload = {
-                "model": "gpt-4o-mini",
+                "model": "gpt-4.1-nano",
                 "messages": [
                     {"role": "system", "content": "You are a helpful assistant that provides accurate answers based only on the provided context. Always include sources in your response with exact URLs."},
                     {"role": "user", "content": prompt}
@@ -490,7 +490,7 @@ async def process_multimodal_query(question, image_base64):
         image_content = f"data:image/jpeg;base64,{image_base64}"
         
         payload = {
-            "model": "gpt-4o-mini",
+            "model": "gpt-4.1-nano",
             "messages": [
                 {
                     "role": "user",
