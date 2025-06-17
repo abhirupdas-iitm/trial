@@ -437,7 +437,7 @@ async def generate_answer(question, relevant_results, max_retries=2):
                     {"role": "system", "content": "You are a helpful assistant that provides accurate answers based only on the provided context. Always include sources in your response with exact URLs."},
                     {"role": "user", "content": prompt}
                 ],
-                "temperature": 0.3  # Lower temperature for more deterministic outputs
+                "temperature": 0  # Lower temperature for more deterministic outputs
             }
             
             async with aiohttp.ClientSession() as session:
